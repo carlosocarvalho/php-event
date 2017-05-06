@@ -1,0 +1,20 @@
+{
+
+    "name": "carlosocarvalho/event",
+    "description": "package for events, codeigniter, laravel frameworks, subscriber",
+    "authors": [{
+        "email": "contato@carlosocarvalhoo.com.br",
+        "name": "Carlos Carvalho"
+    }],
+    "autoload": {
+        "psr-4": {
+            "COC\\Event\\": "src/"
+        }
+    },
+    "require": {
+
+    },
+    "require-dev": {
+        "kahlan/kahlan": "^3.1"
+    }
+}
