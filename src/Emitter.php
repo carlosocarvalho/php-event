@@ -22,7 +22,7 @@ class Emitter {
      * @return Event
      */
     public static function getInstance(){
-         if( ! self::$instance) self::$instance = new self();
+         if ( ! self::$instance) self::$instance = new self();
          return self::$instance;
     }
 
@@ -34,7 +34,7 @@ class Emitter {
      * @return void
      */
     public function emit(  $event, ...$args){
-        if( $this->hasListerner($event)){
+        if ( $this->hasListerner($event)){
                  foreach( $this->listeners[$event] as $ev){
                      $ev->handle($args);
                      if( $ev->stopPropagation) break;
@@ -51,7 +51,7 @@ class Emitter {
      * @return void
      */
     public function on( $event, callable $callback, $priority = 0){
-             if( ! $this->hasListerner( $event )){
+             if ( ! $this->hasListerner( $event )) { 
                       $this->listeners[$event] = []; 
              }
              $this->validateCallableForEvent($event, $callback);
@@ -69,7 +69,7 @@ class Emitter {
      */   
     public function addSubscriber( SubscribeContract $subscriber){
           $events = $subscriber->getEvents();
-          foreach($events as $ev => $method){
+          foreach ($events as $ev => $method) {
               $this->on($ev,[ $subscriber, $method]);
           }
     }
@@ -118,8 +118,8 @@ class Emitter {
      * @return void
      */
     private function validateCallableForEvent( $event,   callable $callable){
-               foreach($this->listeners[$event] as $ev){
-                       if($ev->callback === $callable)
+               foreach ($this->listeners[$event] as $ev) {
+                       if ($ev->callback === $callable)
                            throw new DoubleEventException();
                }
         return false;

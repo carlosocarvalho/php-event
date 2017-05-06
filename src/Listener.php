@@ -47,7 +47,7 @@ class Listener {
      */
     public function handle( array $args){
             
-            if($this->once && $this->calleds > 0) return null; 
+            if ($this->once && $this->calleds > 0) return null; 
              
             $this->calleds++; 
             return call_user_func_array( $this->callback, $args);

@@ -16,6 +16,7 @@
 
     },
     "require-dev": {
-        "kahlan/kahlan": "^3.1"
+        "kahlan/kahlan": "^3.1",
+        "codacy/coverage": "dev-master"
     }
 }
