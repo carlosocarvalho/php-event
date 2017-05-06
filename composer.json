@@ -2,6 +2,7 @@
 
     "name": "carlosocarvalho/event",
     "description": "package for events, codeigniter, laravel frameworks, subscriber",
+    "license": "GPL",
     "authors": [{
         "email": "contato@carlosocarvalhoo.com.br",
         "name": "Carlos Carvalho"

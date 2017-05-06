@@ -1,4 +1,5 @@
 # Events fire
+Is simple observable events for php
 
 ## Install
 ```php 
@@ -17,4 +18,4 @@ $emitter->on('evm.createdUser', function($name, $lastname){
 });
 
 $emitter->emit('evm.createdUser','Firstname','Lastname');
-
+``` 

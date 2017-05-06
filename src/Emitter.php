@@ -9,7 +9,7 @@ class Emitter {
      *
      * @var object
      */
-    private static $__instance;
+    private static $instance;
    
     /**
     * has list with events
@@ -22,8 +22,8 @@ class Emitter {
      * @return Event
      */
     public static function getInstance(){
-         if( ! self::$__instance) self::$__instance = new self();
-         return self::$__instance;
+         if( ! self::$instance) self::$instance = new self();
+         return self::$instance;
     }
 
     /**
@@ -105,8 +105,8 @@ class Emitter {
      */  
     private function orderByListener( $event){
           
-          return uasort( $this->listeners[$event], function($a, $b){
-                 $a->priority < $b->priority;
+          return uasort( $this->listeners[$event], function($eva, $evb){
+                 $eva->priority < $evb->priority;
           });
     }
     
